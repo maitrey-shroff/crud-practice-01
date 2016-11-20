@@ -1,0 +1,19 @@
+<h1> Edit bike </h1>
+
+<%= form_tag "/bikes/#{@bike.id}", method: :patch do %>
+
+  <div>
+    <%= label_tag :type_of_bike %>:
+    <%= text_field_tag :type_of_bike, @bike.type_of_bike %>
+  </div>
+
+  <div>
+    <%= label_tag :size_of_bike %>:
+    <%= text_field_tag :size_of_bike, @bike.size_of_bike %>
+  </div>
+
+  <div>
+    <%= submit_tag "submit" %>
+  </div>
+
+<% end %>
